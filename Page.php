@@ -9,6 +9,9 @@ class Page {
         $this->twig = new \Twig\Environment($twig);
 
         session_start();
+
+        if (empty($_SESSION['articles']))
+            $_SESSION['articles'] = array();
     }
 
     public function sAfficher(string $nomDuTemplate, array $arguments = []) {
