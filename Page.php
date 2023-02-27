@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
 
 class Page {
     private $twig;
@@ -10,8 +11,8 @@ class Page {
         session_start();
     }
 
-    public function sAfficher(string $nomDuTemplate, array $arguments) {
-        $this->twig->render($nomDuTemplate, $arguments);
+    public function sAfficher(string $nomDuTemplate, array $arguments = []) {
+        echo $this->twig->render($nomDuTemplate, $arguments);
     }
 
     public function rediriger(string $autre_page) {
