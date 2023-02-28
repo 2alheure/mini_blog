@@ -7,7 +7,7 @@ $clef = $_GET['clef'];
 
 $nouveauCommentaire = $_POST;
 $nouveauCommentaire['date'] = date('d/m/Y H:i');
-$_SESSION['articles'][$clef]['commentaires'][] = $nouveauCommentaire;
+array_unshift($_SESSION['articles'][$clef]['commentaires'], $nouveauCommentaire);
 
 
 
