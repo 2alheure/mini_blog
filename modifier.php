@@ -21,6 +21,7 @@ if (empty($_POST)) {
 
     $articleModifie = $_POST;
     $articleModifie['date'] = $ancienArticle['date'];
+    $articleModifie['commentaires'] = $ancienArticle['commentaires'];
     $_SESSION['articles'][$clef] = $articleModifie;
 
     $page->ajouterAlerte('Succès', 'Article modifié avec succès.');
