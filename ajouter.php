@@ -14,6 +14,8 @@ if (empty($_POST)) {
     $nouvelArticle = $_POST;
     $nouvelArticle['date'] = date('d/m/Y H:i');
     $_SESSION['articles'][] = $nouvelArticle;
+    
+    $page->ajouterAlerte('Succès', 'Article créé avec succès.');
 
     $page->rediriger('index.php');
 }

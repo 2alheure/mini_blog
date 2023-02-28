@@ -23,5 +23,7 @@ if (empty($_POST)) {
     $articleModifie['date'] = $ancienArticle['date'];
     $_SESSION['articles'][$clef] = $articleModifie;
 
+    $page->ajouterAlerte('Succès', 'Article modifié avec succès.');
+
     $page->rediriger('index.php');
 }
